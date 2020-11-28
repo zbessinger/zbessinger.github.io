@@ -1,0 +1,392 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Localization of Drosophila embryos using connected components in scale space - Zach Bessinger</title>
+<meta name="description" content="geospatial, computer vision, machine learning">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Zach Bessinger">
+<meta property="og:title" content="Localization of Drosophila embryos using connected components in scale space">
+<meta property="og:url" content="https://www.zachbessinger.com/publications/bessinger2012localization/">
+
+
+
+
+
+
+  <meta name="twitter:site" content="@ZachBessinger">
+  <meta name="twitter:title" content="Localization of Drosophila embryos using connected components in scale space">
+  <meta name="twitter:description" content="geospatial, computer vision, machine learning">
+  <meta name="twitter:url" content="https://www.zachbessinger.com/publications/bessinger2012localization/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://www.zachbessinger.com/publications/bessinger2012localization/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Zach Bessinger",
+      "url": "https://www.zachbessinger.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Zach Bessinger Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--archive_centered">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Zach Bessinger</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/publications" >Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/assets/Bessinger_CV.pdf" >CV</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/me.png" alt="Zach Bessinger" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Zach Bessinger</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        geospatial, computer vision, machine learning
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seattle, WA</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/zachary-bessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com/citations?user=vQ_12SsAAAAJ" rel="nofollow noopener noreferrer"><i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i> Google Scholar</a></li>
+          
+        
+          
+            <li><a href="https://bitbucket.org/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+          
+        
+          
+            <li><a href="https://github.com/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/ZachBessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:zach.bessinger@gmail.com">
+            <meta itemprop="email" content="zach.bessinger@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <div class="archive">
+    
+    <center>
+      <h1 class="page__title">Localization of Drosophila embryos using connected components in scale space</h1>
+    </center>
+    
+    <center>
+<h2>Zachary Bessinger, Guangming Xing, and Qi Li</h2>
+<img src="https://www.zachbessinger.com/assets/images/bessinger2012localization.jpg" alt="Project Image" height="70%" width="90%">
+</center>
+
+
+  <h3> Abstract </h3>
+  <p>Localization of Drosophila embryos in images is a fundamental step in an
+  automatic computational system for the exploration of gene-gene interaction on Drosophila.
+  In this paper, we introduce a localization framework based on the analysis of connected
+  components in the Gaussian scale space of an embryonic image. We propose three criteria
+  for the selection of the optimal scale. The experiment results show the promise of the
+  proposed methods.</p>
+  <br>
+
+
+
+
+<h3> Downloads </h3>
+
+<a href="https://www.zachbessinger.com/assets/papers/bessinger2012localization.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+
+
+
+
+
+
+
+<br>
+
+
+<h3> BibTeX </h3>
+<pre>@inproceedings{bessinger2012localization,
+  title = {Localization of Drosophila embryos using connected components in scale space},
+  author = {Bessinger, Zachary and Xing, Guangming and Li, Qi},
+  booktitle = {IEEE International Conference on Image Processing (ICIP)},
+  year = {2012},
+  organization = {IEEE}
+}
+</pre>
+
+
+  </div>
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://bitbucket.org/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Zach Bessinger. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
