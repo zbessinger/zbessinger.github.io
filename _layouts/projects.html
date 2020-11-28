@@ -1,0 +1,54 @@
+---
+layout: archive_centered
+author_profile: true
+---
+
+<center>
+<h2>{{ page.entry.authorsite }}</h2>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.entry.key }}.jpg" alt="Project Image" height="70%" width="90%">
+</center>
+
+{% if page.entry.abstract %}
+  <h3> Abstract </h3>
+  <p>{{ page.entry.abstract }}</p>
+  <br>
+{% endif %}
+
+{% if page.entry.extra %}
+  {% capture extra_text %}fragments/{{ page.entry.key }}.md{% endcapture %}
+
+  <div markdown="1">
+    {% include {{ extra_text }}%}
+  </div>
+  <br>
+{% endif %}
+
+<h3> Downloads </h3>
+
+<a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ page.entry.key }}.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+
+{% if page.entry.supplemental %}
+  <a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ page.entry.key }}-supp.pdf"
+     class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
+{% endif %}
+
+{% if page.entry.poster %}
+  <a href="{{ site.url }}{{ site.baseurl }}/assets/posters/{{ page.entry.key }}.pdf"
+     class="btn btn--small btn--success" role="button">Poster (pdf)</a>
+{% endif %}
+
+{% if page.entry.dataset %}
+  {% if page.entry.dataset == "Coming Soon" %}
+    <a href="#" class="btn btn-warning" role="button">Dataset (Coming Soon)</a>
+  {% else %}
+    <a href="{{ page.entry.dataset }}" class="btn btn--small btn--success" role="button">Dataset</a>
+  {% endif %}
+
+{% endif %}
+
+<br>
+
+
+<h3> BibTeX </h3>
+<pre>{{ page.entry.bibtex }}</pre>
+

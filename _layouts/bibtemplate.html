@@ -1,0 +1,49 @@
+<div class="archive__item">
+  <div class="archive__item-teaser">
+    <a href="{{entry.urlsite}}">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ entry.key }}.jpg">
+    </a>
+  </div>
+  <div class="archive__item-body">
+      <a href="{{entry.urlsite}}">
+        <div class="archive__item-title">{{ entry.title }}</div>
+      </a>
+      <!--
+      <div class="archive__item-excerpt">
+        {{reference | replace_first: 'Z. Bessinger', '<b>Z. Bessinger</b>'}}
+      </div>
+      -->
+
+      <div class="archive__item-excerpt">
+        {{entry.authorsite. | replace_first: 'Zachary Bessinger', '<b>Zachary Bessinger</b>'}}. {{entry.confshort}} {{ entry.year }}.
+      </div>
+      <div class="archive__item-excerpt">
+      {% if entry.haspaper == "true" %}
+        {% if entry.paperpdf %}
+          <a href="{{ entry.paperpdf }}.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+        {% else %}
+          <a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ entry.key }}.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+        {% endif %}
+
+
+        {% if entry.supplemental %}
+          <a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ entry.key }}-supp.pdf"
+             class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
+        {% endif %}
+
+        {% if entry.poster %}
+          <a href="{{ site.url }}{{ site.baseurl }}/assets/posters/{{ entry.key }}.pdf"
+             class="btn btn--small btn--success" role="button">Poster (pdf)</a>
+        {% endif %}
+
+        {% if entry.dataset %}
+          {% if entry.dataset == "Coming Soon" %}
+            <a href="#" class="btn btn--small btn--warning" role="button">Dataset (Coming Soon)</a>
+          {% else %}
+            <a href="{{ entry.dataset }}" class="btn btn--small btn--success" role="button">Dataset</a>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      </div>
+  </div>
+</div>

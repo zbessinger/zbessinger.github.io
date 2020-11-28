@@ -1,0 +1,31 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+<ul>
+  {% for post in site.posts %}
+
+    {% capture url_to_use %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
+
+    {% if post.redirect_url %}
+      {% capture url_part %}{{post.redirect_url | slice: 0, 7}}{% endcapture %}
+      {% if url_part == "/public" %}
+        {% capture url_to_use %}{{ site.baseurl }}{{ post.redirect_url }}{% endcapture %}
+      {% else %}
+        {% capture url_to_use %}{{ post.redirect_url }}{% endcapture %}
+      {% endif %}
+    {% endif %}
+
+    <li>
+      <a href="{{ url_to_use }}">
+        {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% include paginator.html %}

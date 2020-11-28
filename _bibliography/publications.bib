@@ -1,0 +1,161 @@
+@article{wang2020inconsistent,
+  title={Inconsistent Performance of Deep Learning Models on Mammogram Classification},
+  author={Wang, Xiaoqin and Liang, Gongbo and Zhang, Yu and Blanton, Hunter and Bessinger, Zachary and Jacobs, Nathan},
+  journal={Journal of the American College of Radiology},
+  year={2020},
+  publisher={Elsevier},
+  authorsite={Xiaoqin Wang, Gongbo Liang, Yu Zhang, Hunter Blanton, Zachary Bessinger and Nathan Jacobs},
+  urlsite={https://www.jacr.org/article/S1546-1440(20)30028-4/abstract},
+  confshort={JACR},
+  haspaper={false}
+}
+@inproceedings{bessinger2019generative,
+  author={Bessinger, Zachary and Jacobs, Nathan},
+  title={A Generative Model of Worldwide Facial Appearance},
+  year={2019},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision (WACV)},
+  abstract={Human appearance depends on many proximate factors, including age, gender, ethnicity, and personal style choices. In this work, we model the relationship between human appearance and geographic location, which can impact these factors in complex ways. We propose GPS2Face, a dual-component generative network architecture that enables flexible facial generation with fine-grained control of latent factors. We use facial landmarks as a guide to synthesize likely faces for locations around in the world. We train our model on a large-scale dataset of geotagged faces and evaluate our proposed model, both qualitatively and quantitatively, against previous work},
+  authorsite={Zachary Bessinger and Nathan Jacobs},
+  urlsite={http://zachbessinger.com/publications/bessinger2019generative/index.html},
+  haspaper={true},
+  supplemental={true},
+  confshort={WACV}
+}
+
+@inproceedings{zhai2016predicting,
+  title={Predicting Ground-Level Scene Layout from Aerial Imagery},
+  author={Zhai, Menghua and Bessinger, Zachary and Workman, Scott and Jacobs, Nathan},
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2017},
+  abstract={We introduce a novel strategy for learning to extract semantically meaningful features from aerial imagery. Instead of manually labeling the aerial imagery, we propose to predict (noisy) semantic features automatically extracted from co-located ground imagery. Our network architecture takes an aerial image as input, extracts features using a convolutional neural network, and then applies an adaptive transformation to map these features into the ground-level perspective. We use an end-to-end learning approach to minimize the difference between the semantic segmentation extracted directly from the ground image and the semantic segmentation predicted solely based on the aerial image. We show that a model learned using this strategy, with no additional training, is already capable of rough semantic labeling of aerial imagery. Furthermore, we demonstrate that by finetuning this model we can achieve more accurate semantic segmentation than two baseline initialization strategies. We use our network to address the task of estimating the geolocation and geoorientation of a ground image. Finally, we show how features extracted from an aerial image can be used to hallucinate a plausible ground-level panorama.},
+  authorsite={Menghua Zhai, Zachary Bessinger, Scott Workman, and Nathan Jacobs},
+  urlsite={http://cs.uky.edu/\textasciitilde{}ted/research/crossview/},
+  haspaper={true},
+  paperpdf={https://arxiv.org/abs/1612.02709},
+  confshort={CVPR}
+}
+
+@inproceedings{bessinger2016who,
+  title={Who Goes There? Approaches to Mapping Facial Appearance Diversity},
+  author={Bessinger, Zachary and Stauffer, Chris, and Jacobs, Nathan},
+  booktitle={ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)},
+  year={2016},
+  organization={ACM},
+  abstract = {Geotagged imagery, from satellite, aerial, and ground-level
+  cameras, provides a rich record of how the appearance of scenes and objects
+  differ across the globe. Modern web-based mapping software makes it easy to
+  see how different places around the world look, both from satellite and
+  ground-level views. Unfortunately, interfaces for exploring how the appearance
+  of objects depend on geographic location are quite limited. In this work,
+  we focus on a particularly common object, the human face, and propose learning
+  generative models that relate facial appearance and geographic location. We
+  train these models using a novel dataset of geotagged face imagery we constructed
+  for this task. We present qualitative and quantitative results that demonstrate
+  that these models capture meaningful trends in appearance. We also describe a
+  framework for constructing a web-based visualization that captures the geospatial
+  distribution of human facial appearance.},
+  authorsite={Zachary Bessinger, Chris Stauffer, and Nathan Jacobs},
+  urlsite={http://zachbessinger.com/publications/bessinger2016who/index.html},
+  dataset={https://drive.google.com/open?id=0BzvmHzyo_zCAek42NnpQV0wwWms},
+  haspaper={true},
+  poster={true},
+  extra={true},
+  confshort={SIGSPATIAL}
+}
+
+@inproceedings{bessinger2016quantifying,
+  title={Quantifying Curb Appeal},
+  author={Bessinger, Zachary and Jacobs, Nathan},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2016},
+  organization={IEEE},
+  abstract = {The curb appeal of a home, which refers to how attractive it is when
+  viewed from the street, is an important decision-making factor for
+  many home buyers. Existing models for automatically estimating the
+  price of a home ignore this factor, instead focusing exclusively on
+  objective attributes, such as number of bedrooms, the square footage,
+  and the age. We propose to use street-level imagery of a home, in
+  addition to the objective attributes, to estimate the price of the
+  home, thereby quantifying curb appeal. Our method uses deep
+  convolutional neural networks to extract informative image features.
+  We introduce a large dataset to support an extensive evaluation of
+  several approaches. We find that using images and objective attributes
+  together results in more accurate home price estimates than using
+  either in isolation. We also find that representations learned for
+  scene classification tasks are more discriminative for home-price
+  estimation than those learned for other tasks.},
+  authorsite={Zachary Bessinger and Nathan Jacobs},
+  urlsite={http://zachbessinger.com/publications/bessinger2016quantifying/index.html},
+  dataset={https://drive.google.com/open?id=0BzEcTtT1A2ILbnVtWGxyWl85ekk},
+  haspaper={true},
+  poster={true},
+  confshort={ICIP}
+}
+
+@inproceedings{mihail2016sky,
+  title={Sky Segmentation in the Wild: An Empirical Study},
+  author={Mihail, Radu and Workman, Scott and Bessinger, Zachary and Jacobs, Nathan},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision (WACV)},
+  year={2016},
+  organization={IEEE},
+  abstract = {Automatically determining which pixels in an image view the sky, the
+  problem of sky segmentation, is a critical pre-processing step for a
+  wide variety of outdoor image interpretation problems, including
+  horizon estimation, robot navigation and image geolocalization. Many
+  methods for this problem have been proposed with recent work achieving
+  significant improvements on benchmark datasets. However, such datasets
+  are often constructed to contain images captured in favorable
+  conditions and, therefore, do not reflect the broad range of
+  conditions with which a real-world vision system must cope. This paper
+  presents the results of a large-scale empirical evaluation of the
+  performance of three state-of-the-art approaches on a new dataset,
+  which consists of roughly 100k images captured "in the wild". The results
+  show that the performance of these methods can be dramatically
+  degraded by the local lighting and weather conditions. We propose a
+  deep learning based variant of an ensemble solution that outperform the
+  methods we tested, in some cases achieving above 50% relative reduction
+  in misclassified pixels. While our results show there is room for
+  improvement, our hope is that this dataset will encourage others to
+  improve the real-world performance of their algorithms.},
+  authorsite={Radu Mihail, Scott Workman, Zachary Bessinger, and Nathan Jacobs},
+  urlsite={http://mypages.valdosta.edu/rpmihail/skyfinder/index.html},
+  confshort={WACV},
+  haspaper={true},
+}
+
+@inproceedings{bessinger2012localization,
+  title={Localization of Drosophila embryos using connected components in scale space},
+  author={Bessinger, Zachary and Xing, Guangming and Li, Qi},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2012},
+  organization={IEEE},
+  abstract = {Localization of Drosophila embryos in images is a fundamental step in an
+  automatic computational system for the exploration of gene-gene interaction on Drosophila.
+  In this paper, we introduce a localization framework based on the analysis of connected
+  components in the Gaussian scale space of an embryonic image. We propose three criteria
+  for the selection of the optimal scale. The experiment results show the promise of the
+  proposed methods.},
+  authorsite = {Zachary Bessinger, Guangming Xing, and Qi Li},
+  urlsite = {http://zachbessinger.com/publications/bessinger2012localization/index.html},
+  confshort={ICIP},
+  haspaper={true},
+}
+
+@inproceedings{li2012learning,
+  title={Learning scale ranges for the extraction of regions of interest},
+  author={Li, Qi and Bessinger, Zachary},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2012},
+  organization={IEEE},
+  abstract = {Scale space has been widely used in various applications. Given an application,
+  it is essential to decide optimal scales under a certain criterion. Subsampling a scale
+  space is a popular scheme to reduce the search space and thus computational costs.
+  In the context of the extraction of Regions of Interest, we will introduce an alternative
+  scheme that aims to learn scale ranges from training images in order to reduce the search
+  space. We test the proposed scheme in a case study of face localization, and obtain
+  promising results.},
+  authorsite={Qi Li and Zachary Bessinger},
+  urlsite={http://zachbessinger.com/publications/li2012learning/index.html},
+  confshort={ICIP},
+  haspaper={true},
+}
