@@ -188,6 +188,16 @@ exclude:
   - .gitignore
   - .editorconfig
   - "*.log"
+  - CHANGELOG.md
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Vagrantfile
+  - makefile
+
 
 keep_files:
   - .git
