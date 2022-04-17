@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"Our paper, “Inconsistent AI: Deep learning models for breast cancer fail to deliver after closer inspection”, was accepted to the Journal of the American College of Radiology (impact factor: 3.785).  ","categories": [],
         "tags": [],
         "url": "https://www.zachbessinger.com/One-paper-accepted-to-JACR/",
+        "teaser":null},{
+        "title": "One paper accepted to CVPR 2022",
+        "excerpt":"Our paper, “LASER: LAtent SpacE Rendering for 2D Visual Localization”, was accepted to Conference on Computer Vision and Pattern Recognition (CVPR) and selected for full oral presentation at the conference.  ","categories": [],
+        "tags": [],
+        "url": "https://www.zachbessinger.com/One-paper-accepted-to-CVPR-2022/",
         "teaser":null}]
