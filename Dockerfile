@@ -1,10 +1,11 @@
-FROM jekyll/jekyll:3.8.5
+# FROM jekyll/jekyll:3.8.5
+FROM jekyll/jekyll:latest
 
 WORKDIR /srv/jekyll
 COPY Gemfile .
 COPY Gemfile.lock .
 
-RUN gem install bundler:2.0.2
+RUN gem install bundler:2.1.4
 RUN bundle install
 
 EXPOSE 4000
