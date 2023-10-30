@@ -18,7 +18,8 @@ RUN apk --no-cache add \
   tzdata \
   su-exec \
   libressl \
-  shadow
+  shadow \
+  protobuf
 
 # Setup env
 WORKDIR /srv/jekyll
@@ -26,10 +27,11 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 RUN gem install bundler:2.1.4 jekyll:$JEKYLL_VERSION
+RUN gem install --platform ruby google-protobuf nokogiri
 RUN bundle install
 
 EXPOSE 4000
 
-CMD [ "/usr/gem/bin/bundle", "exec", "/usr/local/bundle/bin/jekyll", "serve", "--port", "4000", "--host", "0.0.0.0" ]
+#CMD [ "/usr/local/bundle/bin/bundle", "exec", "/usr/local/bundle/bin/jekyll", "serve", "--port", "4000", "--host", "0.0.0.0" ]
 
 STOPSIGNAL 2
