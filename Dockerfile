@@ -1,10 +1,30 @@
-FROM jekyll/jekyll:3.8.5
+FROM ruby:alpine3.18
+
+ARG JEKYLL_VERSION=4.3.2
+
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV TZ=UTC
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US
+
+# Packages needed to get needed gems built
+RUN apk --no-cache add \
+  build-base \
+  libffi-dev \
+  libxslt \
+  libffi \
+  tzdata \
+  su-exec \
+  libressl \
+  shadow
 
 WORKDIR /srv/jekyll
 COPY Gemfile .
 COPY Gemfile.lock .
 
-RUN gem install bundler:2.1.4	
+RUN gem install bundler:2.1.4 jekyll:$JEKYLL_VERSION
 RUN bundle install
 
 EXPOSE 4000
