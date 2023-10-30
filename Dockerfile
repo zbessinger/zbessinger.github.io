@@ -20,6 +20,7 @@ RUN apk --no-cache add \
   libressl \
   shadow
 
+# Setup env
 WORKDIR /srv/jekyll
 COPY Gemfile .
 COPY Gemfile.lock .
