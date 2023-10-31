@@ -7,7 +7,7 @@ local: clean
 docker: docker-build docker-tag docker-push
 
 docker-build:
-	docker build --tag zbessinger.github.io:latest .
+	docker buildx build --platform=linux/amd64 --tag zbessinger.github.io:latest .
 
 docker-tag:
 	docker tag $$(docker inspect --format="{{.Id}}" zbessinger.github.io | cut -d ":" -f 2) zbessinger/zbessinger.github.io:latest

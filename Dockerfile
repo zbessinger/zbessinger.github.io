@@ -34,6 +34,6 @@ RUN gem install --platform ruby google-protobuf nokogiri
 
 EXPOSE 4000
 
-CMD [ "/usr/local/bundle/bin/bundle", "exec", "jekyll", "serve", "--port", "4000", "--host", "0.0.0.0" ]
+CMD [ "/usr/local/bundle/bin/bundle", "exec", "/usr/local/bundle/bin/jekyll", "serve", "--port", "4000", "--host", "0.0.0.0" ]
 
 STOPSIGNAL 2
