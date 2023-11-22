@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
-  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -13,6 +13,9 @@
 <meta name="description" content="geospatial, computer vision, machine learning">
 
 
+  <meta name="author" content="Zach Bessinger">
+  
+
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
@@ -20,6 +23,8 @@
 <meta property="og:title" content="Publications">
 <meta property="og:url" content="https://www.zachbessinger.com/publications/">
 
+
+  <meta property="og:description" content="geospatial, computer vision, machine learning">
 
 
 
@@ -53,18 +58,16 @@
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
       "@type": "Person",
       "name": "Zach Bessinger",
-      "url": "https://www.zachbessinger.com",
-      "sameAs": null
-    }
-  </script>
+      "url": "https://www.zachbessinger.com/"
+    
+  }
+</script>
 
 
 
@@ -75,9 +78,11 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Zach Bessinger Feed">
 
-<!-- http://t.co/dKP3o1e -->
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Zach Bessinger Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -86,21 +91,8 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-
-<!--[if lte IE 9]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
 
 
@@ -116,20 +108,33 @@
   </head>
 
   <body class="layout--archive">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
 
-    <div class="masthead">
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="/">Zach Bessinger</a>
+        
+        <a class="site-title" href="/">
+          Zach Bessinger
+          
+        </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/publications" >Publications</a>
+              <a href="/publications">Publications</a>
             </li><li class="masthead__menu-item">
-              <a href="/assets/Bessinger_CV.pdf" >CV</a>
+              <a href="/assets/Bessinger_CV.pdf">CV</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -154,12 +159,10 @@
   
 
 
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person">
 
   
     <div class="author__avatar">
-      
-
       
         <img src="/assets/images/me.webp" alt="Zach Bessinger" itemprop="image">
       
@@ -171,9 +174,10 @@
       <h3 class="author__name" itemprop="name">Zach Bessinger</h3>
     
     
-      <p class="author__bio" itemprop="description">
-        geospatial, computer vision, machine learning
-      </p>
+      <div class="author__bio" itemprop="description">
+        <p>geospatial, computer vision, machine learning</p>
+
+      </div>
     
   </div>
 
@@ -181,7 +185,7 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seattle, WA</span>
         </li>
       
@@ -189,23 +193,23 @@
       
         
           
-            <li><a href="https://www.linkedin.com/in/zachary-bessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/zachary-bessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
           
-            <li><a href="https://scholar.google.com/citations?user=vQ_12SsAAAAJ" rel="nofollow noopener noreferrer"><i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i> Google Scholar</a></li>
+            <li><a href="https://scholar.google.com/citations?user=vQ_12SsAAAAJ" rel="nofollow noopener noreferrer"><i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
           
         
           
-            <li><a href="https://bitbucket.org/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+            <li><a href="https://bitbucket.org/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i><span class="label">Bitbucket</span></a></li>
           
         
           
-            <li><a href="https://github.com/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            <li><a href="https://github.com/zbessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
           
         
           
-            <li><a href="https://twitter.com/ZachBessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://twitter.com/ZachBessinger" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
           
         
       
@@ -216,11 +220,9 @@
         <li>
           <a href="mailto:zach.bessinger@gmail.com">
             <meta itemprop="email" content="zach.bessinger@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
-      
-
       
 
       
@@ -282,11 +284,48 @@
   </div>
 
 
+
   <div class="archive">
     
       <h1 id="page-title" class="page__title">Publications</h1>
     
     <div class="grid__wrapper" reversed="reversed"><div class="grid__item"><div class="archive__item">
+  <div class="archive__item-teaser">
+    <a href="https://arxiv.org/abs/2308.15050">
+      <img src="https://www.zachbessinger.com/assets/images/jing2023ibarle.jpg" />
+    </a>
+  </div>
+  <div class="archive__item-body">
+      <a href="https://arxiv.org/abs/2308.15050">
+        <div class="archive__item-title">iBARLE: imBalance-Aware Room Layout Estimation</div>
+      </a>
+      <!--
+      <div class="archive__item-excerpt">
+        <span id="jing2023ibarle">T. Jing, L. Wang, N. Khosravan, Z. Wan, <b>Z. Bessinger</b>, Z. Ding, and S. B. Kang, “iBARLE: imBalance-Aware Room Layout Estimation,” <i>IEEE Winter Conference on Applications of Computer Vision (WACV)</i>, 2024. </span>
+      </div>
+      -->
+
+      <div class="archive__item-excerpt">
+        Taotao Jing, Lichen Wang, Naji Khosravan, Zhiqiang Wan, <b>Zachary Bessinger</b>, Zhengming Ding, Sing Bing Kang. WACV 2024.
+      </div>
+      <div class="archive__item-excerpt">
+      
+        
+          <a href="https://arxiv.org/abs/2308.15050.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+        
+
+
+        
+
+        
+
+        
+      
+      </div>
+  </div>
+</div>
+<a class="details" href="/publications/jing2023ibarle/"></a></div>
+<div class="grid__item"><div class="archive__item">
   <div class="archive__item-teaser">
     <a href="https://htkseason.github.io/">
       <img src="https://www.zachbessinger.com/assets/images/min2022laser.jpg" />
@@ -308,7 +347,7 @@
       <div class="archive__item-excerpt">
       
         
-          <a href="https://arxiv.org/pdf/2204.00157.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+          <a href="https://arxiv.org/abs/2204.00157.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
         
 
 
@@ -425,40 +464,46 @@
 <a class="details" href="/publications/zhai2016predicting/"></a></div>
 <div class="grid__item"><div class="archive__item">
   <div class="archive__item-teaser">
-    <a href="http://mypages.valdosta.edu/rpmihail/skyfinder/index.html">
-      <img src="https://www.zachbessinger.com/assets/images/mihail2016sky.jpg" />
+    <a href="http://zachbessinger.com/publications/bessinger2016who/index.html">
+      <img src="https://www.zachbessinger.com/assets/images/bessinger2016who.jpg" />
     </a>
   </div>
   <div class="archive__item-body">
-      <a href="http://mypages.valdosta.edu/rpmihail/skyfinder/index.html">
-        <div class="archive__item-title">Sky Segmentation in the Wild: An Empirical Study</div>
+      <a href="http://zachbessinger.com/publications/bessinger2016who/index.html">
+        <div class="archive__item-title">Who Goes There? Approaches to Mapping Facial Appearance Diversity</div>
       </a>
       <!--
       <div class="archive__item-excerpt">
-        <span id="mihail2016sky">R. Mihail, S. Workman, <b>Z. Bessinger</b>, and N. Jacobs, “Sky Segmentation in the Wild: An Empirical Study,” in <i>IEEE Winter Conference on Applications of Computer Vision (WACV)</i>, 2016. </span>
+        <span id="bessinger2016who"><b>Z. Bessinger</b>, C. Stauffer, and N. Jacobs, “Who Goes There? Approaches to Mapping Facial Appearance Diversity,” in <i>ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)</i>, 2016. </span>
       </div>
       -->
 
       <div class="archive__item-excerpt">
-        Radu Mihail, Scott Workman, <b>Zachary Bessinger</b>, and Nathan Jacobs. WACV 2016.
+        <b>Zachary Bessinger</b>, Chris Stauffer, and Nathan Jacobs. SIGSPATIAL 2016.
       </div>
       <div class="archive__item-excerpt">
       
         
-          <a href="https://www.zachbessinger.com/assets/papers/mihail2016sky.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+          <a href="https://www.zachbessinger.com/assets/papers/bessinger2016who.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
         
 
 
         
 
         
+          <a href="https://www.zachbessinger.com/assets/posters/bessinger2016who.pdf" class="btn btn--small btn--success" role="button">Poster (pdf)</a>
+        
 
+        
+          
+            <a href="https://drive.google.com/open?id=0BzvmHzyo_zCAek42NnpQV0wwWms" class="btn btn--small btn--success" role="button">Dataset</a>
+          
         
       
       </div>
   </div>
 </div>
-<a class="details" href="/publications/mihail2016sky/"></a></div>
+<a class="details" href="/publications/bessinger2016who/"></a></div>
 <div class="grid__item"><div class="archive__item">
   <div class="archive__item-teaser">
     <a href="http://zachbessinger.com/publications/bessinger2016quantifying/index.html">
@@ -503,46 +548,40 @@
 <a class="details" href="/publications/bessinger2016quantifying/"></a></div>
 <div class="grid__item"><div class="archive__item">
   <div class="archive__item-teaser">
-    <a href="http://zachbessinger.com/publications/bessinger2016who/index.html">
-      <img src="https://www.zachbessinger.com/assets/images/bessinger2016who.jpg" />
+    <a href="http://mypages.valdosta.edu/rpmihail/skyfinder/index.html">
+      <img src="https://www.zachbessinger.com/assets/images/mihail2016sky.jpg" />
     </a>
   </div>
   <div class="archive__item-body">
-      <a href="http://zachbessinger.com/publications/bessinger2016who/index.html">
-        <div class="archive__item-title">Who Goes There? Approaches to Mapping Facial Appearance Diversity</div>
+      <a href="http://mypages.valdosta.edu/rpmihail/skyfinder/index.html">
+        <div class="archive__item-title">Sky Segmentation in the Wild: An Empirical Study</div>
       </a>
       <!--
       <div class="archive__item-excerpt">
-        <span id="bessinger2016who"><b>Z. Bessinger</b>, C. Stauffer, and N. Jacobs, “Who Goes There? Approaches to Mapping Facial Appearance Diversity,” in <i>ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)</i>, 2016. </span>
+        <span id="mihail2016sky">R. Mihail, S. Workman, <b>Z. Bessinger</b>, and N. Jacobs, “Sky Segmentation in the Wild: An Empirical Study,” in <i>IEEE Winter Conference on Applications of Computer Vision (WACV)</i>, 2016. </span>
       </div>
       -->
 
       <div class="archive__item-excerpt">
-        <b>Zachary Bessinger</b>, Chris Stauffer, and Nathan Jacobs. SIGSPATIAL 2016.
+        Radu Mihail, Scott Workman, <b>Zachary Bessinger</b>, and Nathan Jacobs. WACV 2016.
       </div>
       <div class="archive__item-excerpt">
       
         
-          <a href="https://www.zachbessinger.com/assets/papers/bessinger2016who.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
+          <a href="https://www.zachbessinger.com/assets/papers/mihail2016sky.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
         
 
 
         
 
         
-          <a href="https://www.zachbessinger.com/assets/posters/bessinger2016who.pdf" class="btn btn--small btn--success" role="button">Poster (pdf)</a>
-        
 
-        
-          
-            <a href="https://drive.google.com/open?id=0BzvmHzyo_zCAek42NnpQV0wwWms" class="btn btn--small btn--success" role="button">Dataset</a>
-          
         
       
       </div>
   </div>
 </div>
-<a class="details" href="/publications/bessinger2016who/"></a></div>
+<a class="details" href="/publications/mihail2016sky/"></a></div>
 <div class="grid__item"><div class="archive__item">
   <div class="archive__item-teaser">
     <a href="http://zachbessinger.com/publications/bessinger2012localization/index.html">
@@ -622,7 +661,7 @@
 
     
 
-    <div class="page__footer">
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -653,18 +692,21 @@
       
     
 
-    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2022 Zach Bessinger. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2023 Zach Bessinger. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
 
 
 
