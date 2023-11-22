@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.1.1)
+    activesupport (7.1.2)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -13,7 +13,13 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
-    base64 (0.1.1)
+    algolia_html_extractor (2.6.4)
+      json (~> 2.0)
+      nokogiri (~> 1.10)
+    algoliasearch (1.27.5)
+      httpclient (~> 2.8, >= 2.8.3)
+      json (>= 1.5.1)
+    base64 (0.2.0)
     bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
     bigdecimal (3.1.4)
@@ -34,22 +40,23 @@ GEM
       csspool-st (= 3.1.2)
       json
     csspool-st (3.1.2)
-    drb (2.1.1)
+    drb (2.2.0)
       ruby2_keywords
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     execjs (2.9.1)
-    faraday (2.7.11)
+    faraday (2.7.12)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
     ffi (1.16.3)
+    filesize (0.2.0)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
-    google-protobuf (3.25.0)
+    google-protobuf (3.25.1)
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -59,6 +66,7 @@ GEM
       multi_js (>= 0.1.0)
     htmlentities (4.3.4)
     http_parser.rb (0.8.0)
+    httpclient (2.8.3)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jekyll (4.3.2)
@@ -77,6 +85,15 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-algolia (1.7.1)
+      algolia_html_extractor (~> 2.6)
+      algoliasearch (~> 1.26)
+      filesize (~> 0.1)
+      jekyll (>= 3.6, < 5.0)
+      json (~> 2.0)
+      nokogiri (~> 1.6)
+      progressbar (~> 1.9)
+      verbal_expressions (~> 0.1.5)
     jekyll-data (1.1.1)
       jekyll (>= 3.3, < 5.0.0)
     jekyll-feed (0.17.0)
@@ -127,9 +144,9 @@ GEM
       css_press
     multi_js (0.1.0)
       uglifier (~> 2)
-    mutex_m (0.1.2)
+    mutex_m (0.2.0)
     namae (1.1.1)
-    nokogiri (1.15.4)
+    nokogiri (1.15.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -143,7 +160,8 @@ GEM
       octopress-hooks
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (5.0.3)
+    progressbar (1.13.0)
+    public_suffix (5.0.4)
     racc (1.7.3)
     rake (13.1.0)
     rb-fsevent (0.11.2)
@@ -167,6 +185,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicode-display_width (2.5.0)
+    verbal_expressions (0.1.5)
     webrick (1.8.1)
 
 PLATFORMS
@@ -174,6 +193,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-algolia
   jekyll-data
   jekyll-feed
   jekyll-gist

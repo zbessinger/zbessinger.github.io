@@ -27,7 +27,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jemoji"
   gem "octopress-minify-html"
-  # gem "jekyll-algolia"
+  gem "jekyll-algolia"
   gem "jekyll-include-cache"
 end
 
