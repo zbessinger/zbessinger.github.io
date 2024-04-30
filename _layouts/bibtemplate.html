@@ -31,6 +31,11 @@
              class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
         {% endif %}
 
+        {% if entry.supplementalurl %}
+          <a href="{{ entry.supplementalurl }}"
+             class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
+        {% endif %}
+
         {% if entry.poster %}
           <a href="{{ site.url }}{{ site.baseurl }}/assets/posters/{{ entry.key }}.pdf"
              class="btn btn--small btn--success" role="button">Poster (pdf)</a>

@@ -32,6 +32,11 @@ author_profile: true
      class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
 {% endif %}
 
+{% if page.entry.supplementalurl %}
+  <a href="{{ page.entry.supplementalurl }}"
+     class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
+{% endif %}
+
 {% if page.entry.poster %}
   <a href="{{ site.url }}{{ site.baseurl }}/assets/posters/{{ page.entry.key }}.pdf"
      class="btn btn--small btn--success" role="button">Poster (pdf)</a>
