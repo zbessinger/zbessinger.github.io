@@ -50,6 +50,12 @@ var store = [{
         "title": "One paper accepted to WACV 2024",
         "excerpt":"Our paper, “iBARLE: imBalance-Aware Room Layout Estimation”, was accepted to IEEE/CVF Winter Conference on Applications of Computer Vision (WACV).  ","categories": [],
         "tags": [],
-        "url": "/One-paper-accepted-to-WACV-2024-copy/",
+        "url": "/One-paper-accepted-to-WACV-2024/",
+        "teaser": null
+      },{
+        "title": "One paper accepted to CVPRW 2024",
+        "excerpt":"Our paper, “ZInD-Tell: Towards Translating Indoor Panoramas into Descriptions”, was accepted to IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) Multimodal Learning and Applications Workshop (MULA).  ","categories": [],
+        "tags": [],
+        "url": "/One-paper-accepted-to-CVPRW-2024/",
         "teaser": null
       }]
