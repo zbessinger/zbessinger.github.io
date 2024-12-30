@@ -341,6 +341,7 @@ scholar:
   source: ./_bibliography
   bibliography: publications.bib
   bibliography_template: bibtemplate
+  bibliography_template_path: _layouts/bibliography
   bibtex_skip_fields: ["abstract","authorsite","urlsite","poster","dataset","extra","supplemental","confshort","paperpdf","haspaper"]
 
   replace_strings: true

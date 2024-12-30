@@ -1,21 +1,23 @@
 <div class="archive__item">
   <div class="archive__item-teaser">
+    {% if entry.urlsite %}
     <a href="{{entry.urlsite}}">
       <img src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ entry.key }}.jpg">
     </a>
+    {% else %}
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ entry.key }}.jpg">
+    {% endif %}
   </div>
   <div class="archive__item-body">
+      {% if entry.urlsite %}
       <a href="{{entry.urlsite}}">
         <div class="archive__item-title">{{ entry.title }}</div>
       </a>
-      <!--
+      {% else %}
+      <div class="archive__item-title">{{ entry.title }}</div>
+      {% endif %}
       <div class="archive__item-excerpt">
-        {{reference | replace_first: 'Z. Bessinger', '<b>Z. Bessinger</b>'}}
-      </div>
-      -->
-
-      <div class="archive__item-excerpt">
-        {{entry.authorsite. | replace_first: 'Zachary Bessinger', '<b>Zachary Bessinger</b>'}}. {{entry.confshort}} {{ entry.year }}.
+        {{entry.authorsite | replace_first: 'Zachary Bessinger', '<b>Zachary Bessinger</b>'}}. {{entry.confshort}} {{ entry.year }}.
       </div>
       <div class="archive__item-excerpt">
       {% if entry.haspaper == "true" %}
@@ -24,23 +26,18 @@
         {% else %}
           <a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ entry.key }}.pdf" class="btn btn--small btn--success" role="button">Paper (pdf)</a>
         {% endif %}
-
-
         {% if entry.supplemental %}
           <a href="{{ site.url }}{{ site.baseurl }}/assets/papers/{{ entry.key }}-supp.pdf"
              class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
         {% endif %}
-
         {% if entry.supplementalurl %}
           <a href="{{ entry.supplementalurl }}"
              class="btn btn--small btn--success" role="button">Supplemental (pdf)</a>
         {% endif %}
-
         {% if entry.poster %}
           <a href="{{ site.url }}{{ site.baseurl }}/assets/posters/{{ entry.key }}.pdf"
              class="btn btn--small btn--success" role="button">Poster (pdf)</a>
         {% endif %}
-
         {% if entry.dataset %}
           {% if entry.dataset == "Coming Soon" %}
             <a href="#" class="btn btn--small btn--warning" role="button">Dataset (Coming Soon)</a>
