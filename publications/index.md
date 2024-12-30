@@ -3,7 +3,7 @@ layout: archive
 author_profile: true
 title: Publications
 ---
-{% assign years = (2015..2025) | reverse %}
+{% assign years = (2012..2025) | reverse %}
 {% for year in years %}
   {% capture refs %}{% bibliography --query @*[year={{year}}] %}{% endcapture %}
   {% assign trimmed_refs = refs | strip %}
