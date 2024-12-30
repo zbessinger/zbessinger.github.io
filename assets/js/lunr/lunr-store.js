@@ -58,4 +58,10 @@ var store = [{
         "tags": [],
         "url": "/One-paper-accepted-to-CVPRW-2024/",
         "teaser": null
+      },{
+        "title": "One paper accepted to WACV 2025",
+        "excerpt":"Our paper, “TFM^2: Training-Free Mask Matching for Open-Vocabulary Semantic Segmentation”, was accepted to IEEE Winter Conference on Applications of Computer Vision (WACV).  ","categories": [],
+        "tags": [],
+        "url": "/One-paper-accepted-to-WACV-2025/",
+        "teaser": null
       }]
